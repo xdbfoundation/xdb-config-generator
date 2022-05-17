@@ -3,7 +3,7 @@ BUCKET_DIR_PATH="/var/history/buckets"
 
 NODE_HOME_DOMAIN="{{node_home_domain}}"
 
-NODE_SEED="{{node_seed}}" self"
+NODE_SEED="{{node_seed}} self"
 NODE_IS_VALIDATOR=true
 
 DATABASE="postgresql://dbname={{db_name}} user={{db_user}} password={{db_password}} host={{db_host}}"
