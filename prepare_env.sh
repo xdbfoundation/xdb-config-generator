@@ -20,6 +20,7 @@ read -p "Node Seed: " node_seed
 read -p "Node Name: " node_name
 
 python3 generator.py $home_domain $node_seed $node_name > /etc/stellar.cfg
+hostname $node_name
 
 DISTRO=$(lsb_release -cs)
  wget -qO - https://apt.stellar.org/SDF.asc | apt-key add -
