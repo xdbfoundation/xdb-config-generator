@@ -1,4 +1,4 @@
-LOG_FILE_PATH="/var/log/digitalbits-core.log"
+LOG_FILE_PATH="/var/log/stellar-core.log"
 BUCKET_DIR_PATH="/var/history/buckets"
 
 NODE_HOME_DOMAIN="{{node_home_domain}}"
@@ -11,12 +11,11 @@ DATABASE="postgresql://dbname={{db_name}} user={{db_user}} password={{db_passwor
 HTTP_PORT=11626
 PUBLIC_HTTP_PORT=true
 
-NETWORK_PASSPHRASE="LiveNet Global DigitalBits Network ; February 2021"
-FEE_PASSPHRASE="LiveNet DigitalBits Fee Pool ; February 2021"
+NETWORK_PASSPHRASE="LiveNet Global XDBChain Network ; November 2023"
 
 PEER_PORT=11625
 
-KNOWN_CURSORS=["FRONTIER"]
+KNOWN_CURSORS=["HORIZON"]
 
 FAILURE_SAFETY=1
 CATCHUP_COMPLETE=true
@@ -42,5 +41,5 @@ HISTORY="{{quorum["HISTORY"]}}"
 {% endfor %}
 
 [HISTORY.local]
-get="{{history_get}}"
-put="{{history_put}}"
+get="aws s3 cp s3://xdbfoundation-history/livenet/s{{node_name}}/{0} {1}"
+put="aws s3 cp {0} s3://xdbfoundation-history/livenet/s{{node_name}}/{1}"
