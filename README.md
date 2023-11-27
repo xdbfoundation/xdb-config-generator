@@ -3,10 +3,8 @@
 This generator was created to simplify config generation for large amounts of
 quorum sets
 
-The generator expects a `config.json` file to be present in the project root.
-
-You can find this file, along with actual structure of XDB CHAIN Quorum Sets,
-here - https://livenet.xdbchain.com/config.json
+The generator relies on the `config.json` file, containing the structure of the
+XDB CHAIN Quorum Sets, to be present in the project root.
 
 ## Params
 

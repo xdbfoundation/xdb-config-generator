@@ -37,7 +37,7 @@ Type=simple
 Restart=always
 RestartSec=1
 User=root
-ExecStart=/usr/bin/stellar-core --conf /etc/stellar.cfg run
+ExecStart=/usr/bin/stellar-core --conf /etc/xdbchain.cfg run
 
 [Install]
 WantedBy=multi-user.target
